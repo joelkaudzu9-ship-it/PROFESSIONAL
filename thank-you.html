@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thank You!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! | Joel Kaudzu</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            color: #06b6d4;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #2563eb, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
-    <h1>Thank you for your message! 🎉</h1>
-    <p>I'll get back to you soon.</p>
-    <a href="index.html">Return to Portfolio</a>
+    <div class="container">
+        <h1>🎉 Thank You!</h1>
+        <p>Your message has been sent successfully. I'll get back to you as soon as possible!</p>
+        <p>In the meantime, feel free to connect with me on social media or explore more of my work.</p>
+        <a href="index.html" class="btn">Return to Portfolio</a>
+    </div>
 </body>
 </html>
