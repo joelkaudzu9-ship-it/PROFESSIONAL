@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'Sending...';
             
             // Using Formspree (FREE service)
-            fetch('https://formspree.io/f/xjvnkjzz', {  // Replace with your Formspree ID
+            fetch('https://formspree.io/f/xojnvgwl', {  // Replace with your Formspree ID
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -115,3 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 });
+
