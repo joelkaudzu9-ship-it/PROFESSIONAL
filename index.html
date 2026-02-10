@@ -2,339 +2,425 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Joel Kaudzu | Android-Style Portfolio</title>
-    <meta name="description" content="Dental Surgery student blending healthcare with Android-style tech innovation. Creator of CheckMySmile and health-tech applications.">
-    <meta name="keywords" content="dental technology, health-tech, android developer, app development, material design, Malawi">
-    
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Android Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    
-    <!-- Styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JOEL KAUDZU | Digital Health Innovator</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#3a86ff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+    <style>
+        /* Force Font Awesome to load */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    </style>
 </head>
 <body>
-    <!-- Android Status Bar -->
-    <div class="android-status-bar">
-        <div class="status-time">12:00 PM</div>
-        <div class="status-icons">
-            <i class="fas fa-signal network-icon"></i>
-            <i class="fas fa-wifi wifi-icon"></i>
-            <i class="fas fa-battery-full battery-icon"></i>
-        </div>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
     </div>
 
-    <!-- Loading Screen -->
-    <div class="loading-screen android-loader-screen">
-        <div class="android-loader-content">
-            <div class="android-loader"></div>
-            <div class="loading-text">Initializing Portfolio...</div>
-            <div class="loading-dots">
-                <div class="dot" style="background-color: #3a86ff;"></div>
-                <div class="dot" style="background-color: #8338ec;"></div>
-                <div class="dot" style="background-color: #ff006e;"></div>
-                <div class="dot" style="background-color: #ffbe0b;"></div>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">🦷</div>
+                <span class="logo-text">Joel Kaudzu</span>
             </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user-md"></i>
+                    <span>About</span>
+                </a>
+                <a href="#skills" class="nav-link">
+                    <i class="fas fa-brain"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-comment"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="nav-theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="section hero-android">
+    <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content-android">
-                <div class="hero-header-android">
-                    <div class="android-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="hero-badges">
-                        <span class="android-chip" style="background: linear-gradient(135deg, #3a86ff, #8338ec);">
-                            <i class="fas fa-robot"></i>
-                            Android Style
-                        </span>
-                        <span class="android-chip" style="background: linear-gradient(135deg, #ff006e, #fb5607);">
-                            <i class="fas fa-heartbeat"></i>
-                            Health-Tech
-                        </span>
+            <!-- Profile Floating Card -->
+            <div class="profile-card animate__animated animate__fadeInDown">
+                <div class="profile-image-container">
+                    <img src="profile.jpg" alt="Joel Kaudzu" class="profile-image" onerror="this.src='https://ui-avatars.com/api/?name=Joel+Kaudzu&background=2563eb&color=fff&size=150'">
+                    <div class="profile-status">
+                        <div class="status-dot"></div>
+                        <span>Available</span>
                     </div>
                 </div>
-                
-                <div class="hero-text-android">
-                    <div class="android-card hero-card">
-                        <div class="card-header">
-                            <div class="card-icon" style="background: linear-gradient(135deg, #3a86ff, #8338ec);">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <div>
-                                <h1 class="card-title">Joel Kaudzu</h1>
-                                <p class="card-subtitle">Dental Tech Innovator</p>
-                            </div>
+                <div class="profile-badges">
+                    <span class="badge dental"><i class="fas fa-tooth"></i> Dental</span>
+                    <span class="badge tech"><i class="fas fa-code"></i> Tech</span>
+                    <span class="badge leadership"><i class="fas fa-crown"></i> Leader</span>
+                </div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-text animate__animated animate__fadeInUp">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">JOEL GEORGE</span>
+                        <br>
+                        <span class="highlight-text">KAUDZU</span>
+                    </h1>
+                    
+                    <!-- Typing Effect -->
+                    <div class="typing-container">
+                        <span class="typing-text"></span>
+                        <span class="cursor"></span>
+                    </div>
+                    
+                    <p class="hero-subtitle">
+                        Dental Surgery Student | Health-Tech Innovator | Data Privacy Lead | KUHeS Science Coordinator
+                    </p>
+
+                    <!-- Hero Stats -->
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <i class="fas fa-university"></i>
+                            <h3>KUHeS</h3>
+                            <p>Dental Surgery</p>
                         </div>
-                        
-                        <div class="typing-container-android">
-                            <span class="typing-text">Innovating Healthcare with Technology</span>
-                            <span class="cursor"></span>
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>QuantumResolve</h3>
+                            <p>Data Privacy Lead</p>
                         </div>
-                        
-                        <p class="hero-description">
-                            Dental Surgery student at KUHeS creating Android-inspired health solutions. 
-                            Combining medical expertise with cutting-edge tech for accessible healthcare in Malawi.
-                        </p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <i class="fas fa-code" style="color: #3a86ff;"></i>
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-users" style="color: #8338ec;"></i>
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Innovations</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-star" style="color: #ffbe0b;"></i>
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Passion</span>
-                            </div>
+                        <div class="stat">
+                            <i class="fas fa-users-cog"></i>
+                            <h3>Science for All</h3>
+                            <p>Innovations Coordinator</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="hero-actions-android">
-                    <button class="android-btn android-btn-primary" onclick="scrollToSection('projects')">
-                        <i class="fas fa-rocket"></i>
-                        View Projects
-                    </button>
-                    <button class="android-btn android-btn-secondary" onclick="scrollToSection('contact')">
-                        <i class="fas fa-comment-dots"></i>
-                        Connect
-                    </button>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hero-actions animate__animated animate__fadeInUp animate__delay-1s">
+                <a href="#contact" class="btn btn-primary glow">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Let's Connect</span>
+                    <div class="btn-wave"></div>
+                </a>
+                <a href="#projects" class="btn btn-outline">
+                    <i class="fas fa-eye"></i>
+                    <span>View Projects</span>
+                </a>
+            </div>
+
+            <!-- Social Bar - SIMPLE WORKING VERSION -->
+            <div class="social-bar animate__animated animate__fadeIn animate__delay-2s">
+                <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/einzmo9" class="social-link" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:joelkaudzu9@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" class="social-link" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Swipe Up</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about glass">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01</span>
+                My Story & Passion
+                <span class="title-line"></span>
+            </h2>
+
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Blending science, technology, and creativity to build solutions that heal, educate, and inspire."</p>
+                        <div class="quote-author">— Joel George Kaudzu</div>
+                    </div>
+                    
+                    <p>I'm a passionate Dental Surgery student at Kamuzu University of Health Sciences with a mission to bridge healthcare and technology. My journey is driven by the belief that technology can revolutionize healthcare delivery in Africa and beyond.</p>
+                    
+                    <p>As the elected Science for All Innovations Coordinator at KUHeS, I lead initiatives to promote STEM and technological innovation among students. At QuantumResolve Technologies, I work as Data Privacy Lead, ensuring secure digital solutions.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation Mindset</h4>
+                            <p>Started campus businesses early and believe in learning by building.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Teaching Experience</h4>
+                            <p>Former Math Tutor at Bright Future Academy (2024-2025).</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-tooth"></i>
+                            <h4>Dental Science</h4>
+                            <p>Pursuing expertise in oral health and surgery at KUHeS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline animate-on-scroll">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2025 - Present</h4>
+                            <h3>Data Privacy & Compliance Lead</h3>
+                            <p class="company">QuantumResolve Technologies</p>
+                            <p>Leading data protection strategies and compliance frameworks for tech solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2024 - 2025</h4>
+                            <h3>Mathematics Tutor</h3>
+                            <p class="company">Bright Future Academy</p>
+                            <p>Guided secondary students in mathematics, developing teaching strategies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2023 - Present</h4>
+                            <h3>Science for All Innovations Coordinator</h3>
+                            <p class="company">Kamuzu University of Health Sciences</p>
+                            <p>Elected role promoting science and tech innovation through campus events and initiatives.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section skills-android">
+    <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header-android">
-                <span class="section-label-android">Skills & Expertise</span>
-                <h2 class="section-title-android">Tech Stack Mastery</h2>
-                <p class="section-subtitle-android">Combining dental expertise with technical skills</p>
-            </div>
-            
-            <div class="skills-grid-android">
-                <div class="android-card">
-                    <div class="card-header">
-                        <div class="card-icon" style="background: linear-gradient(135deg, #3a86ff, #8338ec);">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div>
-                            <h3 class="card-title">Technical Skills</h3>
-                            <p class="card-subtitle">Development & Technology</p>
-                        </div>
+            <h2 class="section-title">
+                <span class="title-number">02</span>
+                Skills & Expertise
+                <span class="title-line"></span>
+            </h2>
+
+            <div class="skills-grid">
+                <!-- Technical Skills -->
+                <div class="skill-category glass animate-on-scroll">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Technical Skills</h3>
                     </div>
-                    
-                    <div class="skills-list-android">
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fab fa-python" style="color: #3a86ff;"></i>
-                                <span>Python Development</span>
-                                <span class="skill-percent">95%</span>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="95" style="background: linear-gradient(135deg, #3a86ff, #8338ec);"></div>
-                            </div>
+                            <span class="skill-percent">90%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-mobile-alt" style="color: #8338ec;"></i>
-                                <span>Mobile App Dev</span>
-                                <span class="skill-percent">92%</span>
+                        <div class="skill-item">
+                            <span><i class="fas fa-mobile-alt"></i> MIT App Inventor</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="92" style="background: linear-gradient(135deg, #8338ec, #ff006e);"></div>
-                            </div>
+                            <span class="skill-percent">95%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-database" style="color: #ff006e;"></i>
-                                <span>Firebase & Backend</span>
-                                <span class="skill-percent">88%</span>
+                        <div class="skill-item">
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="88" style="background: linear-gradient(135deg, #ff006e, #fb5607);"></div>
-                            </div>
+                            <span class="skill-percent">85%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-shield-alt" style="color: #38b000;"></i>
-                                <span>Data Privacy</span>
-                                <span class="skill-percent">90%</span>
+                        <div class="skill-item">
+                            <span><i class="fas fa-flask"></i> Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="90" style="background: linear-gradient(135deg, #38b000, #ffbe0b);"></div>
-                            </div>
+                            <span class="skill-percent">80%</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="android-card">
-                    <div class="card-header">
-                        <div class="card-icon" style="background: linear-gradient(135deg, #ff006e, #fb5607);">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div>
-                            <h3 class="card-title">Healthcare Skills</h3>
-                            <p class="card-subtitle">Medical & Professional</p>
-                        </div>
+
+                <!-- Professional Skills -->
+                <div class="skill-category glass animate-on-scroll">
+                    <div class="category-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Professional Skills</h3>
                     </div>
-                    
-                    <div class="skills-list-android">
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-tooth" style="color: #3a86ff;"></i>
-                                <span>Dental Healthcare</span>
-                                <span class="skill-percent">96%</span>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Leadership</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 92%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="96"></div>
-                            </div>
+                            <span class="skill-percent">92%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-comments" style="color: #8338ec;"></i>
-                                <span>Patient Communication</span>
-                                <span class="skill-percent">94%</span>
+                        <div class="skill-item">
+                            <span>Communication</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="94" style="background: linear-gradient(135deg, #8338ec, #ff006e);"></div>
-                            </div>
+                            <span class="skill-percent">88%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-lightbulb" style="color: #ffbe0b;"></i>
-                                <span>Innovation & Problem Solving</span>
-                                <span class="skill-percent">95%</span>
+                        <div class="skill-item">
+                            <span>Problem Solving</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="95" style="background: linear-gradient(135deg, #ffbe0b, #38b000);"></div>
-                            </div>
+                            <span class="skill-percent">95%</span>
                         </div>
-                        
-                        <div class="skill-item-android">
-                            <div class="skill-info-android">
-                                <i class="fas fa-users" style="color: #fb5607;"></i>
-                                <span>Team Leadership</span>
-                                <span class="skill-percent">90%</span>
+                        <div class="skill-item">
+                            <span>Team Management</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
                             </div>
-                            <div class="android-progress">
-                                <div class="android-progress-fill" data-level="90" style="background: linear-gradient(135deg, #fb5607, #ff006e);"></div>
-                            </div>
+                            <span class="skill-percent">85%</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="tech-tags-android">
-                <span class="android-chip"><i class="fab fa-python"></i> Python</span>
-                <span class="android-chip"><i class="fas fa-fire"></i> Firebase</span>
-                <span class="android-chip"><i class="fas fa-flask"></i> Flask</span>
-                <span class="android-chip"><i class="fab fa-js"></i> JavaScript</span>
-                <span class="android-chip"><i class="fab fa-android"></i> Android</span>
-                <span class="android-chip"><i class="fas fa-database"></i> SQL</span>
-                <span class="android-chip"><i class="fas fa-mobile-alt"></i> Mobile Dev</span>
-                <span class="android-chip"><i class="fas fa-chart-line"></i> Data Analysis</span>
+
+            <!-- Skill Tags -->
+            <div class="skill-tags animate-on-scroll">
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fas fa-mobile-alt"></i> App Dev</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> Firebase</span>
+                <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="skill-tag"><i class="fas fa-shield-alt"></i> Data Privacy</span>
+                <span class="skill-tag"><i class="fas fa-paint-brush"></i> UI/UX</span>
+                <span class="skill-tag"><i class="fas fa-chart-line"></i> Analytics</span>
+                <span class="skill-tag"><i class="fas fa-file-alt"></i> Microsoft Office</span>
+                <span class="skill-tag"><i class="fas fa-search"></i> Research</span>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects-android">
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header-android">
-                <span class="section-label-android">Portfolio</span>
-                <h2 class="section-title-android">Featured Projects</h2>
-                <p class="section-subtitle-android">Android-inspired health-tech innovations</p>
-            </div>
-            
-            <div class="projects-grid-android" id="projectsContainer">
-                <!-- Projects will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
+            <h2 class="section-title">
+                <span class="title-number">03</span>
+                Projects & Innovations
+                <span class="title-line"></span>
+            </h2>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-android">
-        <div class="container">
-            <div class="section-header-android">
-                <span class="section-label-android">Timeline</span>
-                <h2 class="section-title-android">Experience & Education</h2>
-                <p class="section-subtitle-android">My journey in tech and healthcare</p>
-            </div>
-            
-            <div class="timeline-android">
-                <div class="android-card timeline-card">
-                    <div class="timeline-item">
-                        <div class="timeline-dot" style="background: #3a86ff;"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2025 - Present</span>
-                            <h3>Data Privacy Lead</h3>
-                            <p class="timeline-company">QuantumResolve Technologies</p>
-                            <p>Developing secure protocols for health-tech apps with focus on patient privacy.</p>
-                            <div class="timeline-tags">
-                                <span class="android-chip small">Security</span>
-                                <span class="android-chip small">Compliance</span>
-                                <span class="android-chip small">Healthcare</span>
-                            </div>
+            <div class="projects-grid">
+                <!-- Project 1: CheckMySmile -->
+                <div class="project-card glass animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-tag dental"><i class="fas fa-tooth"></i> Dental Tech</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CheckMySmile</h3>
+                        <p class="project-desc">Educational app for oral health awareness and dental hygiene practices. Features interactive learning modules and dental care reminders.</p>
+                        <div class="project-tech">
+                            <span><i class="fas fa-mobile-alt"></i> MIT App Inventor</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fas fa-heartbeat"></i> Healthcare</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://youtu.be/XfdkxzoQw9Q" target="_blank" class="btn btn-small">
+                                <i class="fas fa-play-circle"></i> Watch Demo
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot" style="background: #8338ec;"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2023 - Present</span>
-                            <h3>Science Innovations Coordinator</h3>
-                            <p class="timeline-company">KUHeS Science for All</p>
-                            <p>Leading student initiatives to promote STEM and tech innovation in healthcare.</p>
-                            <div class="timeline-tags">
-                                <span class="android-chip small">STEM</span>
-                                <span class="android-chip small">Leadership</span>
-                                <span class="android-chip small">Innovation</span>
-                            </div>
+                </div>
+
+                <!-- Project 2: Poetry Quote App -->
+                <div class="project-card glass animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-tag creative"><i class="fas fa-pen-fancy"></i> Creative Tech</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Poetry Quote App</h3>
+                        <p class="project-desc">App extracting meaningful lines from poems as daily motivational quotes with mood-based recommendations and personal journaling features.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-brain"></i> NLP</span>
+                            <span><i class="fas fa-book-open"></i> Literature</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-lightbulb"></i> Concept Stage
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fas fa-file-alt"></i> View Design
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot" style="background: #ff006e;"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2024 - 2025</span>
-                            <h3>Mathematics Tutor</h3>
-                            <p class="timeline-company">Bright Future Academy</p>
-                            <p>Teaching with interactive methods and technology-enhanced learning tools.</p>
-                            <div class="timeline-tags">
-                                <span class="android-chip small">Education</span>
-                                <span class="android-chip small">Technology</span>
-                                <span class="android-chip small">Teaching</span>
-                            </div>
+                </div>
+
+                <!-- Project 3: KUHeS Campus Connect -->
+                <div class="project-card glass animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-tag edtech"><i class="fas fa-university"></i> EdTech</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>KUHeS Campus Connect</h3>
+                        <p class="project-desc">Platform for student discussions, events, academic community building, resource sharing, and collaborative learning at KUHeS.</p>
+                        <div class="project-tech">
+                            <span><i class="fas fa-mobile-alt"></i> MIT App Inventor</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fas fa-users"></i> Community</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-file-alt"></i> Project Brief
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fas fa-drafting-compass"></i> Wireframe
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -342,732 +428,173 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-android">
+    <!-- Contact Section - WITH WORKING EMAIL FORM -->
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header-android">
-                <span class="section-label-android">Connect</span>
-                <h2 class="section-title-android">Let's Collaborate</h2>
-                <p class="section-subtitle-android">Have an exciting project? Let's build something amazing!</p>
-            </div>
-            
-            <div class="contact-grid-android">
-                <div class="contact-info-android">
-                    <div class="android-card">
-                        <div class="card-header">
-                            <div class="card-icon" style="background: linear-gradient(135deg, #ff006e, #fb5607);">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h3 class="card-title">Contact Info</h3>
-                                <p class="card-subtitle">Get in touch</p>
-                            </div>
-                        </div>
+            <h2 class="section-title">
+                <span class="title-number">04</span>
+                Let's Connect
+                <span class="title-line"></span>
+            </h2>
+
+            <div class="contact-content">
+                <!-- Contact Form - USING FORMSUBMIT -->
+                <div class="contact-form glass animate-on-scroll">
+                    <h3><i class="fas fa-envelope"></i> Send Message</h3>
+                    <p>Interested in health-tech, dental innovation, or collaboration? Reach out!</p>
+                    
+                    <!-- FormSubmit Form - ACTUALLY SENDS EMAILS -->
+                    <form action="https://formsubmit.co/joelkaudzu9@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Portfolio Message">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you.html">
                         
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope" style="color: #3a86ff;"></i>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p>joelkaudzu9@gmail.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <i class="fas fa-phone" style="color: #8338ec;"></i>
-                                <div>
-                                    <h4>Phone / WhatsApp</h4>
-                                    <p>+265 983 142 415</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt" style="color: #ff006e;"></i>
-                                <div>
-                                    <h4>Location</h4>
-                                    <p>KUHeS, Blantyre, Malawi</p>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <i class="fas fa-user"></i>
                         </div>
-                        
-                        <div class="social-links-android">
-                            <a href="https://github.com/joelkaudzu9-ship-it" class="social-link-android" target="_blank">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info animate-on-scroll">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kamuzu University of Health Sciences</p>
+                            <p>Blantyre, Malawi 🇲🇼</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>joelkaudzu9@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+265 983 142 415</p>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" 
+                       target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                    
+                    <!-- Social Links -->
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-buttons">
+                            <a href="https://github.com/joelkaudzu9-ship-it" target="_blank" class="social-btn github">
                                 <i class="fab fa-github"></i>
+                                GitHub
                             </a>
-                            <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link-android" target="_blank">
+                            <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" target="_blank" class="social-btn linkedin">
                                 <i class="fab fa-linkedin"></i>
+                                LinkedIn
                             </a>
-                            <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link-android" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="mailto:joelkaudzu9@gmail.com" class="social-link-android">
-                                <i class="fas fa-envelope"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61552790831710" target="_blank" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form-android">
-                    <div class="android-card">
-                        <div class="card-header">
-                            <div class="card-icon" style="background: linear-gradient(135deg, #38b000, #ffbe0b);">
-                                <i class="fas fa-paper-plane"></i>
-                            </div>
-                            <div>
-                                <h3 class="card-title">Send Message</h3>
-                                <p class="card-subtitle">Quick contact form</p>
-                            </div>
-                        </div>
-                        
-                        <form id="contactForm" action="https://formspree.io/f/xjvnewwn" method="POST">
-                            <div class="form-group-android">
-                                <input type="text" id="name" name="name" class="android-input" placeholder="Your Name" required>
-                                <i class="fas fa-user"></i>
-                            </div>
-                            
-                            <div class="form-group-android">
-                                <input type="email" id="email" name="email" class="android-input" placeholder="Email Address" required>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            
-                            <div class="form-group-android">
-                                <input type="text" id="subject" name="subject" class="android-input" placeholder="Subject" required>
-                                <i class="fas fa-tag"></i>
-                            </div>
-                            
-                            <div class="form-group-android">
-                                <textarea id="message" name="message" class="android-input" placeholder="Your Message" rows="5" required></textarea>
-                                <i class="fas fa-comment"></i>
-                            </div>
-                            
-                            <button type="submit" class="android-btn android-btn-primary">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
+            </div>
+            
+            <!-- Quote Box -->
+            <div class="quote-box glass animate-on-scroll">
+                <i class="fas fa-quote-left"></i>
+                <p>"Every great innovation starts with a simple idea and the courage to pursue it."</p>
+                <div class="quote-author">— Joel George Kaudzu</div>
             </div>
         </div>
     </section>
 
-    <!-- Android Navigation Bar -->
-    <nav class="android-navbar">
-        <a href="#home" class="nav-item active">
-            <div class="nav-icon">
-                <i class="fas fa-home"></i>
-            </div>
-            <span class="nav-label">Home</span>
-        </a>
-        
-        <a href="#skills" class="nav-item">
-            <div class="nav-icon">
-                <i class="fas fa-code"></i>
-            </div>
-            <span class="nav-label">Skills</span>
-        </a>
-        
-        <a href="#projects" class="nav-item">
-            <div class="nav-icon">
-                <i class="fas fa-briefcase"></i>
-            </div>
-            <span class="nav-label">Projects</span>
-        </a>
-        
-        <a href="#experience" class="nav-item">
-            <div class="nav-icon">
-                <i class="fas fa-timeline"></i>
-            </div>
-            <span class="nav-label">Timeline</span>
-        </a>
-        
-        <a href="#contact" class="nav-item">
-            <div class="nav-icon">
-                <i class="fas fa-user"></i>
-            </div>
-            <span class="nav-label">Contact</span>
-        </a>
-    </nav>
-
-    <!-- Floating Action Button -->
-    <button class="fab" id="fabButton">
-        <i class="fas fa-plus"></i>
-    </button>
-
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle-android" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    
-    <script>
-        // Quick helper functions
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">JGK</div>
+                    <h3>Joel George Kaudzu</h3>
+                    <p>Dental Surgery Student | Health-Tech Innovator</p>
+                </div>
                 
-                // Update nav items
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${sectionId}`) {
-                        item.classList.add('active');
-                    }
-                });
-            }
-        }
-        
-        // Project data for dynamic loading
-        const androidProjects = [
-            {
-                id: 1,
-                title: "CheckMySmile AI",
-                description: "Android-style dental health assistant with AI diagnosis and personalized care recommendations.",
-                category: "dental-tech",
-                tags: ["Python", "AI", "Healthcare", "Android"],
-                image: "checkmysmile.jpg",
-                icon: "fas fa-tooth",
-                color: "#3a86ff"
-            },
-            {
-                id: 2,
-                title: "HealthConnect Mobile",
-                description: "Material Design healthcare platform connecting patients with medical professionals.",
-                category: "health-tech",
-                tags: ["Flutter", "Firebase", "Real-time", "Mobile"],
-                image: "poetry-app.jpg",
-                icon: "fas fa-heartbeat",
-                color: "#8338ec"
-            },
-            {
-                id: 3,
-                title: "EduTech Learning",
-                description: "Interactive educational platform with Android UI for STEM learning resources.",
-                category: "edtech",
-                tags: ["React Native", "Education", "Gamification", "Android"],
-                image: "kuhes-campus-connect.jpg",
-                icon: "fas fa-graduation-cap",
-                color: "#ff006e"
-            }
-        ];
-        
-        // Load projects dynamically
-        document.addEventListener('DOMContentLoaded', function() {
-            const projectsContainer = document.getElementById('projectsContainer');
-            if (projectsContainer) {
-                androidProjects.forEach(project => {
-                    const projectCard = `
-                        <div class="android-card project-card">
-                            <div class="project-header">
-                                <div class="project-icon" style="background: ${project.color};">
-                                    <i class="${project.icon}"></i>
-                                </div>
-                                <div>
-                                    <h3>${project.title}</h3>
-                                    <p class="project-category">${project.category}</p>
-                                </div>
-                            </div>
-                            
-                            <p class="project-description">${project.description}</p>
-                            
-                            <div class="project-tags">
-                                ${project.tags.map(tag => `<span class="android-chip small">${tag}</span>`).join('')}
-                            </div>
-                            
-                            <div class="project-actions">
-                                <button class="android-btn android-btn-secondary" onclick="viewProject(${project.id})">
-                                    <i class="fas fa-eye"></i>
-                                    View Details
-                                </button>
-                                <button class="android-btn android-btn-primary" onclick="launchProject(${project.id})">
-                                    <i class="fas fa-rocket"></i>
-                                    Launch App
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                    projectsContainer.innerHTML += projectCard;
-                });
-            }
-        });
-        
-        function viewProject(id) {
-            const project = androidProjects.find(p => p.id === id);
-            if (project) {
-                alert(`${project.title}\n\n${project.description}\n\nTags: ${project.tags.join(', ')}`);
-            }
-        }
-        
-        function launchProject(id) {
-            const project = androidProjects.find(p => p.id === id);
-            if (project) {
-                window.open(`#project-${id}`, '_blank');
-            }
-        }
-    </script>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/joelkaudzu9-ship-it" target="_blank" title="GitHub" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" target="_blank" title="LinkedIn" class="footer-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61552790831710" target="_blank" title="Facebook" class="footer-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/einzmo9" target="_blank" title="Instagram" class="footer-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Joel George Kaudzu. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for Health-Tech Innovation | From Malawi 🇲🇼</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <button class="fab" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     
-    <style>
-        /* Additional Android-specific styles */
-        .android-loader-screen {
-            background: linear-gradient(135deg, var(--surface-1), var(--surface-2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .android-loader-content {
-            text-align: center;
-        }
-        
-        .loading-text {
-            margin: 20px 0;
-            color: var(--text-primary);
-            font-size: 18px;
-            font-weight: 500;
-        }
-        
-        .hero-android {
-            padding-top: 60px;
-            padding-bottom: 100px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero-content-android {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .hero-header-android {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        
-        .hero-badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .hero-card {
-            margin-bottom: 30px;
-        }
-        
-        .typing-container-android {
-            height: 60px;
-            margin: 20px 0;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .hero-description {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: var(--text-secondary);
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: var(--surface-3);
-            border-radius: var(--android-radius-medium);
-            transition: all 0.3s ease;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            background: var(--surface-4);
-        }
-        
-        .stat-item i {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        
-        .stat-number {
-            display: block;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 5px 0;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .hero-actions-android {
-            display: flex;
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .section {
-            padding: 80px 20px;
-        }
-        
-        .section-header-android {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-label-android {
-            display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, var(--android-primary), var(--android-secondary));
-            color: white;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-        
-        .section-title-android {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--android-primary), var(--android-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .section-subtitle-android {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .skills-grid-android {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .skills-list-android {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .skill-item-android {
-            margin-bottom: 15px;
-        }
-        
-        .skill-info-android {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .skill-info-android i {
-            font-size: 20px;
-            margin-right: 10px;
-        }
-        
-        .skill-info-android span:first-child {
-            flex: 1;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-        
-        .skill-percent {
-            color: var(--android-primary);
-            font-weight: 600;
-            min-width: 40px;
-            text-align: right;
-        }
-        
-        .tech-tags-android {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 40px;
-        }
-        
-        .projects-grid-android {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .project-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: var(--android-radius-medium);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .project-category {
-            color: var(--android-accent);
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        
-        .android-chip.small {
-            padding: 4px 12px;
-            font-size: 12px;
-        }
-        
-        .project-actions {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .timeline-android {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline-card {
-            position: relative;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 4px solid var(--surface-2);
-        }
-        
-        .timeline-content {
-            background: var(--surface-3);
-            padding: 20px;
-            border-radius: var(--android-radius-medium);
-            border-left: 4px solid var(--android-primary);
-        }
-        
-        .timeline-date {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--surface-4);
-            color: var(--android-primary);
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .timeline-company {
-            color: var(--text-secondary);
-            font-style: italic;
-            margin: 5px 0 10px;
-        }
-        
-        .timeline-tags {
-            display: flex;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .contact-grid-android {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .contact-details {
-            margin: 30px 0;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: var(--surface-3);
-            border-radius: var(--android-radius-medium);
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: var(--surface-4);
-            transform: translateX(10px);
-        }
-        
-        .contact-item i {
-            font-size: 24px;
-        }
-        
-        .contact-item h4 {
-            margin: 0;
-            color: var(--text-primary);
-            font-size: 16px;
-        }
-        
-        .contact-item p {
-            margin: 5px 0 0;
-            color: var(--text-secondary);
-        }
-        
-        .social-links-android {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--surface-4);
-        }
-        
-        .social-link-android {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--surface-3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-primary);
-            font-size: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link-android:hover {
-            background: linear-gradient(135deg, var(--android-primary), var(--android-secondary));
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .form-group-android {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        
-        .form-group-android i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-secondary);
-        }
-        
-        .form-group-android textarea + i {
-            top: 25px;
-            transform: none;
-        }
-        
-        .theme-toggle-android {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--surface-2);
-            border: none;
-            color: var(--text-primary);
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            box-shadow: var(--android-elevation-2);
-            transition: all 0.3s ease;
-        }
-        
-        .theme-toggle-android:hover {
-            transform: rotate(45deg);
-            background: var(--surface-3);
-        }
-        
-        @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-actions-android {
-                flex-direction: column;
-            }
-            
-            .section-title-android {
-                font-size: 36px;
-            }
-            
-            .project-actions {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .section {
-                padding: 60px 15px;
-            }
-            
-            .hero-header-android {
-                justify-content: center;
-                text-align: center;
-            }
-            
-            .hero-badges {
-                justify-content: center;
-            }
-            
-            .section-title-android {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" 
+       class="fab whatsapp-fab" target="_blank" title="Message on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="tooth-icon">🦷</div>
+            <div class="loading-text">Loading Brilliance...</div>
+        </div>
+    </div>
+
+    <!-- Add EmailJS for form submission -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
