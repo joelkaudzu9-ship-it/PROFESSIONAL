@@ -10,12 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
     <style>
-        /* Quick fix for social icons */
-        .social-link i {
-            z-index: 2;
-            position: relative;
-            display: block !important;
-        }
+        /* Force Font Awesome to load */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
     </style>
 </head>
 <body>
@@ -60,9 +56,9 @@
             <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="nav-theme-toggle">
+            <button class="nav-theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -72,7 +68,7 @@
             <!-- Profile Floating Card -->
             <div class="profile-card animate__animated animate__fadeInDown">
                 <div class="profile-image-container">
-                    <img src="profile.jpg" alt="Joel Kaudzu" class="profile-image">
+                    <img src="profile.jpg" alt="Joel Kaudzu" class="profile-image" onerror="this.src='https://ui-avatars.com/api/?name=Joel+Kaudzu&background=2563eb&color=fff&size=150'">
                     <div class="profile-status">
                         <div class="status-dot"></div>
                         <span>Available</span>
@@ -138,24 +134,24 @@
                 </a>
             </div>
 
-            <!-- Social Bar - FIXED VERSION -->
+            <!-- Social Bar - SIMPLE WORKING VERSION -->
             <div class="social-bar animate__animated animate__fadeIn animate__delay-2s">
-                <a href="https://github.com/joelkaudzu9-ship-it" class="social-link github" target="_blank" title="GitHub">
+                <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link linkedin" target="_blank" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link facebook" target="_blank" title="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link" target="_blank" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/einzmo9" class="social-link instagram" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/einzmo9" class="social-link" target="_blank" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:joelkaudzu9@gmail.com" class="social-link email" title="Email">
+                <a href="mailto:joelkaudzu9@gmail.com" class="social-link" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" class="social-link whatsapp" target="_blank" title="WhatsApp">
+                <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" class="social-link" target="_blank" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -189,13 +185,13 @@
                     
                     <p>I'm a passionate Dental Surgery student at Kamuzu University of Health Sciences with a mission to bridge healthcare and technology. My journey is driven by the belief that technology can revolutionize healthcare delivery in Africa and beyond.</p>
                     
-                    <p>As the elected Science for All Innovations Coordinator at KUHeS, I lead initiatives to technological innovation among students. At QuantumResolve Technologies, I work as Data Privacy Lead, ensuring secure digital solutions.</p>
+                    <p>As the elected Science for All Innovations Coordinator at KUHeS, I lead initiatives to promote STEM and technological innovation among students. At QuantumResolve Technologies, I work as Data Privacy Lead, ensuring secure digital solutions.</p>
                     
                     <div class="about-highlights">
                         <div class="highlight-card">
                             <i class="fas fa-lightbulb"></i>
                             <h4>Innovation Mindset</h4>
-                            <p>I wo'nt leave it till its done</p>
+                            <p>I won'nt leave it till its done.</p>
                         </div>
                         <div class="highlight-card">
                             <i class="fas fa-hands-helping"></i>
@@ -205,7 +201,7 @@
                         <div class="highlight-card">
                             <i class="fas fa-tooth"></i>
                             <h4>Dental Science</h4>
-                            <p>Pursuing expertise in oral health and surgery at KUHeS.</p>
+                            <p>Studying bachelor of dental surgery at KUHeS.</p>
                         </div>
                     </div>
                 </div>
@@ -269,7 +265,7 @@
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-item">
-                            <span><i class="fas fa-mobile-alt"></i> MIT App Inventor</span>
+                            <span><i class="fas fa-mobile-alt"></i> Python app development</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 95%"></div>
                             </div>
@@ -364,15 +360,15 @@
                     </div>
                     <div class="project-content">
                         <h3>CheckMySmile</h3>
-                        <p class="project-desc">An oral health dignostic and education app that i designed to bridge the gap between neglected oral health symptoms and timely diagnosis. Features interactive learning modules and dental care reminders.</p>
+                        <p class="project-desc">An oral health diagnostic too that i designed to bridge the gap between neglected oral health symptoms and timely diagnosis. Features interactive learning modules and dental care reminders.</p>
                         <div class="project-tech">
-                            <span><i class="fas fa-mobile-alt"></i> python app development</span>
+                            <span><i class="fas fa-mobile-alt"></i> Python app development </span>
                             <span><i class="fas fa-fire"></i> Firebase</span>
                             <span><i class="fas fa-heartbeat"></i> Healthcare</span>
                         </div>
                         <div class="project-actions">
                             <a href="https://youtu.be/XfdkxzoQw9Q" target="_blank" class="btn btn-small">
-                                <i class="fas fa-play-circle"></i> Watch Demo
+                                <i class="fas fa-play-circle"></i> Watch the video
                             </a>
                             <a href="#" class="btn btn-outline btn-small">
                                 <i class="fas fa-code"></i> View Code
@@ -414,7 +410,7 @@
                         <h3>KUHeS Campus Connect</h3>
                         <p class="project-desc">Platform for student discussions, events, academic community building, resource sharing, and collaborative learning at KUHeS.</p>
                         <div class="project-tech">
-                            <span><i class="fas fa-mobile-alt"></i> python app development</span>
+                            <span><i class="fas fa-mobile-alt"></i> Python app development </span>
                             <span><i class="fas fa-fire"></i> Firebase</span>
                             <span><i class="fas fa-users"></i> Community</span>
                         </div>
@@ -432,7 +428,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - WITH WORKING EMAIL FORM -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">
@@ -442,26 +438,32 @@
             </h2>
 
             <div class="contact-content">
-                <!-- Contact Form -->
+                <!-- Contact Form - USING FORMSUBMIT -->
                 <div class="contact-form glass animate-on-scroll">
                     <h3><i class="fas fa-envelope"></i> Send Message</h3>
-                    <p>Interested in health-tech, dental innovation, or collaboration? Reach out!</p>
+                    <p>Interested in health-tech, dental innovation, or collaboration? Reach out to me!</p>
                     
-                    <form id="contactForm">
+                    <!-- FormSubmit Form - ACTUALLY SENDS EMAILS -->
+                    <form action="https://formsubmit.co/joelkaudzu9@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Portfolio Message">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you.html">
+                        
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                             <i class="fas fa-tag"></i>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                             <i class="fas fa-comment"></i>
                         </div>
                         <button type="submit" class="btn btn-primary">
@@ -539,7 +541,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo">JGK</div>
                     <h3>Joel George Kaudzu</h3>
-                    <p>Dental Surgery Student | Oral Health-Tech Innovator</p>
+                    <p>Dental Surgery Student | Health-Tech Innovator</p>
                 </div>
                 
                 <div class="footer-links">
@@ -567,7 +569,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> @Joel George Kaudzu 2026. All rights reserved.</p>
+                <p>&copy; <span id="currentYear"></span> Joel George Kaudzu. All rights reserved.</p>
                 <p>Made with <i class="fas fa-heart"></i> for Health-Tech Innovation | From Malawi 🇲🇼</p>
             </div>
         </div>
@@ -587,10 +589,12 @@
     <div class="loading-screen">
         <div class="loader">
             <div class="tooth-icon">🦷</div>
-            <div class="loading-text">Loading grace,will and passion...</div>
+            <div class="loading-text">Loading passion😇...</div>
         </div>
     </div>
 
+    <!-- Add EmailJS for form submission -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
