@@ -1981,3 +1981,21 @@ body.light-mode .loading-text {
     }
 }
 
+/* FORCE HIDE LOADING SCREEN AFTER 3 SECONDS */
+.loading-screen {
+    animation: hideLoading 0.5s ease 3s forwards !important;
+}
+
+@keyframes hideLoading {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+/* ALWAYS SHOW CONTENT */
+body {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
