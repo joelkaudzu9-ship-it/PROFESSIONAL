@@ -1,6 +1,5 @@
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize everything
     initPortfolio();
 });
 
@@ -8,7 +7,7 @@ function initPortfolio() {
     // Set current year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
-    // Initialize loading screen
+    // Loading screen
     setTimeout(() => {
         document.querySelector('.loading-screen').style.opacity = '0';
         setTimeout(() => {
@@ -35,7 +34,7 @@ function initPortfolio() {
         }
     });
     
-    // Smooth scrolling for navigation links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -45,17 +44,14 @@ function initPortfolio() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Close mobile menu
                 navLinks.classList.remove('active');
                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 
-                // Smooth scroll
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
                 
-                // Update active nav link
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('active');
                 });
@@ -73,10 +69,8 @@ function initPortfolio() {
             navbar.classList.remove('scrolled');
         }
         
-        // Update active section
         updateActiveSection();
         
-        // Show/hide back to top button
         const backToTop = document.getElementById('backToTop');
         if (window.scrollY > 500) {
             backToTop.style.opacity = '1';
@@ -89,7 +83,7 @@ function initPortfolio() {
         }
     });
     
-    // Update active section in navigation
+    // Update active section
     function updateActiveSection() {
         const sections = document.querySelectorAll('section[id]');
         const scrollY = window.scrollY + 100;
@@ -151,7 +145,6 @@ function initPortfolio() {
         }
     }
     
-    // Start typing effect after load
     setTimeout(type, 1000);
     
     // Back to top button
@@ -178,7 +171,7 @@ function initPortfolio() {
     };
     
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Initial check
+    animateOnScroll();
     
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
@@ -186,28 +179,19 @@ function initPortfolio() {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
             submitBtn.disabled = true;
             
-            // Reset form
             contactForm.reset();
             
-            // Reset button after 3 seconds
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }, 3000);
             
-            // In production, you would send this data to a server
-            console.log('Form submitted:', data);
             alert('Thank you for your message! I will get back to you soon.');
         });
     }
@@ -256,24 +240,7 @@ function initPortfolio() {
         themeToggle.querySelector('i').className = 'fas fa-sun';
     }
     
-    // Particle animation
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach((particle, index) => {
-        particle.style.animationDelay = `${index * 3}s`;
-    });
-    
-    // Interactive project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Social media hover effects
+    // Social icons hover effect
     document.querySelectorAll('.social-link').forEach(link => {
         link.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px) rotate(5deg)';
@@ -284,147 +251,21 @@ function initPortfolio() {
         });
     });
     
-    // Add ripple effect to buttons
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const ripple = document.createElement('span');
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.classList.add('ripple');
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
+    // Project cards hover effect
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
         });
     });
     
-    // Add ripple CSS
-    const rippleStyle = document.createElement('style');
-    rippleStyle.textContent = `
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(0);
-            animation: ripple-animation 0.6s linear;
-            pointer-events: none;
-        }
-        
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(rippleStyle);
-    
-    // Initialize tooltips
-    document.querySelectorAll('[title]').forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.textContent = this.getAttribute('title');
-            document.body.appendChild(tooltip);
-            
-            const rect = this.getBoundingClientRect();
-            tooltip.style.left = (rect.left + rect.width / 2) + 'px';
-            tooltip.style.top = (rect.top - 40) + 'px';
-            tooltip.style.transform = 'translateX(-50%)';
-            
-            this.tooltip = tooltip;
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            if (this.tooltip) {
-                this.tooltip.remove();
-                this.tooltip = null;
-            }
-        });
-    });
-    
-    // Add tooltip CSS
-    const tooltipStyle = document.createElement('style');
-    tooltipStyle.textContent = `
-        .tooltip {
-            position: fixed;
-            background: var(--dark);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            z-index: 10000;
-            pointer-events: none;
-            opacity: 0.9;
-            white-space: nowrap;
-            font-family: 'Inter', sans-serif;
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-        }
-        
-        .tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 5px;
-            border-style: solid;
-            border-color: var(--dark) transparent transparent transparent;
-        }
-        
-        body.light-mode .tooltip {
-            background: white;
-            color: var(--dark);
-            border-color: rgba(0, 0, 0, 0.1);
-        }
-        
-        body.light-mode .tooltip::after {
-            border-color: white transparent transparent transparent;
-        }
-    `;
-    document.head.appendChild(tooltipStyle);
-    
-    // Parallax effect for hero
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            const speed = 0.5;
-            hero.style.backgroundPositionY = `${scrolled * speed}px`;
-        }
-    });
-    
-    // Log successful initialization
-    console.log('🎉 Portfolio initialized successfully!');
-    console.log('👨‍⚕️ Dental Tech Innovator Portfolio');
-    console.log('🎨 All images incorporated');
-    console.log('📱 Mobile-optimized & Interactive');
-    console.log('⚡ Performance optimized');
+    console.log('🎉 Portfolio loaded successfully!');
 }
 
-// Handle page visibility
-document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) {
-        // Page became visible again
-        console.log('Welcome back! 👋');
-    }
-});
-
-// Handle beforeunload
-window.addEventListener('beforeunload', () => {
-    // Add exit animation
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.3s ease';
-});
-
-// Handle page load animation
+// Page load animation
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
