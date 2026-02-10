@@ -1,15 +1,15 @@
-// DOM Ready - SIMPLIFIED WORKING VERSION
+// DOM Ready - ENHANCED WORKING VERSION
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Portfolio loading...');
     
-    // 1. SET CURRENT YEAR (ALWAYS WORKS)
+    // 1. SET CURRENT YEAR
     const yearElement = document.getElementById('currentYear');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
         console.log('✅ Year set:', yearElement.textContent);
     }
     
-    // 2. HIDE LOADING SCREEN IMMEDIATELY (NO DELAY)
+    // 2. HIDE LOADING SCREEN
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
         loadingScreen.style.opacity = '0';
@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             console.log('✅ Loading screen hidden');
-        }, 500); // Reduced from 1500ms to 500ms
+        }, 500);
     }
     
-    // 3. MOBILE MENU TOGGLE
+    // 3. ENHANCED MOBILE MENU TOGGLE
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
@@ -29,16 +29,37 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
-            this.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+            const isExpanded = navLinks.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+            this.innerHTML = isExpanded 
+                ? '<i class="fas fa-times"></i><span class="sr-only">Close menu</span>' 
+                : '<i class="fas fa-bars"></i><span class="sr-only">Open menu</span>';
         });
         
-        // Close menu when clicking anywhere else
+        // Close menu when clicking links
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i><span class="sr-only">Open menu</span>';
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i><span class="sr-only">Open menu</span>';
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i><span class="sr-only">Open menu</span>';
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
@@ -56,7 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Close mobile menu if open
                 if (navLinks && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
-                    if (menuToggle) menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    if (menuToggle) {
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i><span class="sr-only">Open menu</span>';
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
                 }
                 
                 // Scroll to target
@@ -168,28 +192,82 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 9. ANIMATE ON SCROLL (SIMPLIFIED)
+    // 9. ENHANCED ANIMATE ON SCROLL
     function checkScroll() {
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        const windowHeight = window.innerHeight;
+        const triggerPoint = 100;
+        
+        elements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            
+            if (elementTop < windowHeight - triggerPoint) {
                 el.classList.add('visible');
             }
         });
     }
     
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll);
-    setTimeout(checkScroll, 500); // Initial check
+    // Debounced scroll event for better performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(checkScroll, 50);
+    });
     
-    // 10. FORM FEEDBACK
+    // Initial checks
+    window.addEventListener('load', checkScroll);
+    setTimeout(checkScroll, 100);
+    
+    // 10. ENHANCED FORM FUNCTIONALITY
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function() {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
             const submitBtn = document.getElementById('submitBtn');
-            if (submitBtn) {
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
+            const formStatus = document.getElementById('formStatus');
+            
+            // Save button text
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+                    formStatus.style.backgroundColor = 'rgba(16, 185, 129, 0.2)';
+                    formStatus.style.color = '#10b981';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                    
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error
+                formStatus.textContent = '❌ Something went wrong. Please email me directly at joelkaudzu9@gmail.com';
+                formStatus.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                formStatus.style.color = '#ef4444';
+                formStatus.style.display = 'block';
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
         });
     }
@@ -205,7 +283,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 1000);
     
+    // 12. UPDATE ACTIVE NAV LINK ON SCROLL
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveNavLink);
+    
     console.log('🎉 Portfolio fully loaded!');
 });
-
-// Remove the window.load event to avoid conflicts
