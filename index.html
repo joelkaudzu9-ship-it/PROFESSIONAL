@@ -2,256 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>JOEL KAUDZU | Digital Health Innovator & Tech Leader</title>
-    <meta name="description" content="Dental Surgery Student | Health-Tech Innovator | Data Privacy Lead | STEM Coordinator">
-    <meta name="keywords" content="dental tech, health innovation, python developer, data privacy, malawi tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Joel Kaudzu | Dental Tech Innovator & Developer</title>
+    <meta name="description" content="Dental Surgery student bridging healthcare and technology through innovative digital solutions. Creator of CheckMySmile and health-tech applications.">
+    <meta name="keywords" content="dental technology, health-tech, python developer, app development, data privacy, Malawi">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
 </head>
 <body>
-    <!-- Enhanced Animated Background -->
-    <div class="animated-bg">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
-        <div class="particle particle-4"></div>
-        <div class="particle particle-5"></div>
-        <div class="gradient-overlay"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="tooth-icon animate-pulse">🦷</div>
+            <div class="loading-text">Loading Portfolio</div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar glass">
+    <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <div class="logo-icon">🦷</div>
-                <span class="logo-text">JOEL KAUDZU</span>
+                <span class="logo-icon">🦷</span>
+                <span class="logo-text">Joel Kaudzu</span>
             </div>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
             <div class="nav-links">
                 <a href="#home" class="nav-link active">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
                 <a href="#about" class="nav-link">
-                    <i class="fas fa-user-md"></i>
+                    <i class="fas fa-user"></i>
                     <span>About</span>
                 </a>
                 <a href="#skills" class="nav-link">
-                    <i class="fas fa-brain"></i>
+                    <i class="fas fa-code"></i>
                     <span>Skills</span>
                 </a>
                 <a href="#projects" class="nav-link">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-project-diagram"></i>
                     <span>Projects</span>
                 </a>
                 <a href="#contact" class="nav-link">
-                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-envelope"></i>
                     <span>Contact</span>
                 </a>
             </div>
-            <div class="nav-actions">
-                <button class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button class="nav-theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <!-- Profile Card -->
-            <div class="profile-card animate__animated animate__fadeInDown">
-                <div class="profile-image-container">
-                    <img src="profile.jpg" alt="Joel Kaudzu" class="profile-image" 
-                         onerror="this.src='https://ui-avatars.com/api/?name=Joel+Kaudzu&background=2563eb&color=fff&size=150&bold=true'">
-                    <div class="profile-status">
-                        <div class="status-dot"></div>
-                        <span>Available for Collaboration</span>
-                    </div>
-                </div>
-                <div class="profile-badges">
-                    <span class="badge dental"><i class="fas fa-tooth"></i> Dental Tech</span>
-                    <span class="badge tech"><i class="fas fa-code"></i> Full Stack Dev</span>
-                    <span class="badge leadership"><i class="fas fa-crown"></i> Tech Leader</span>
-                </div>
-            </div>
-
-            <!-- Hero Content -->
             <div class="hero-content">
-                <div class="hero-text animate__animated animate__fadeInUp">
+                <div class="hero-text animate-fade-in">
+                    <div class="badge">Dental Tech Innovator</div>
                     <h1 class="hero-title">
-                        <span class="gradient-text">JOEL GEORGE</span>
-                        <br>
-                        <span class="highlight-text">KAUDZU</span>
+                        <span class="gradient-text">Joel George</span>
+                        <span class="highlight">Kaudzu</span>
                     </h1>
                     
-                    <!-- Typing Effect -->
                     <div class="typing-container">
                         <span class="typing-text"></span>
                         <span class="cursor"></span>
                     </div>
                     
                     <p class="hero-subtitle">
-                        Dental Surgery Student | Health-Tech Innovator | Data Privacy Lead | KUHeS Science Coordinator
+                        Dental Surgery student at KUHeS, blending healthcare expertise with technology to create 
+                        accessible digital health solutions for Malawi and beyond.
                     </p>
-
-                    <!-- Hero Stats -->
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-icon">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <h3>KUHeS</h3>
-                            <p>Dental Surgery</p>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3>Data Privacy</h3>
-                            <p>QuantumResolve</p>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon">
-                                <i class="fas fa-users-cog"></i>
-                            </div>
-                            <h3>STEM Leader</h3>
-                            <p>Science for All</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-eye"></i>
+                            View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image animate-slide-in">
+                    <div class="image-container">
+                        <img src="profile.jpg" alt="Joel Kaudzu" class="profile-image"
+                             onerror="this.src='https://ui-avatars.com/api/?name=Joel+Kaudzu&background=0a192f&color=64ffda&size=400&bold=true&font-size=0.8'">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span>Available for collaboration</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- CTA Buttons -->
-            <div class="hero-actions animate__animated animate__fadeInUp animate__delay-1s">
-                <a href="#contact" class="btn btn-primary glow">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>Let's Connect</span>
-                    <div class="btn-wave"></div>
-                </a>
-                <a href="#projects" class="btn btn-outline">
-                    <i class="fas fa-eye"></i>
-                    <span>View Projects</span>
-                </a>
-                <a href="#skills" class="btn btn-outline">
-                    <i class="fas fa-bolt"></i>
-                    <span>My Skills</span>
-                </a>
-            </div>
-
-            <!-- Social Bar -->
-            <div class="social-bar animate__animated animate__fadeIn animate__delay-2s">
-                <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/einzmo9" class="social-link" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:joelkaudzu9@gmail.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" class="social-link" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-
-            <!-- Scroll Indicator -->
+            
             <div class="scroll-indicator">
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
-                <span>Explore More</span>
+                <span>Scroll to explore</span>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about glass">
+    <section id="about" class="section about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">01</span>
-                <h2 class="section-title">My Journey & Vision</h2>
-                <div class="title-line"></div>
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Bridging Dentistry & Technology</h2>
+                <p class="section-subtitle">My journey in healthcare innovation</p>
             </div>
-
+            
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
+                    <p class="lead">
+                        I'm a Dental Surgery student at Kamuzu University of Health Sciences with a passion for 
+                        creating technology solutions that make healthcare more accessible, understandable, and 
+                        effective for everyone.
+                    </p>
+                    
                     <div class="quote-card">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>"Blending science, technology, and creativity to build solutions that heal, educate, and inspire the next generation."</p>
-                        <div class="quote-author">— Joel George Kaudzu</div>
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Technology should serve healthcare, not complicate it. My mission is to build tools that 
+                        empower both patients and practitioners."</p>
                     </div>
                     
-                    <p class="about-para">I'm a passionate Dental Surgery student at Kamuzu University of Health Sciences with a mission to bridge healthcare and technology in Africa. My work focuses on creating accessible, innovative solutions that address real-world health challenges.</p>
-                    
-                    <p class="about-para">As the elected Science for All Innovations Coordinator at KUHeS, I lead initiatives to promote STEM and technological innovation among students. At QuantumResolve Technologies, I serve as Data Privacy Lead, ensuring secure and compliant digital solutions.</p>
-                    
-                    <div class="about-highlights">
-                        <div class="highlight-card">
-                            <div class="highlight-icon">
-                                <i class="fas fa-lightbulb"></i>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025 - Present</span>
+                                <h3>Data Privacy Lead</h3>
+                                <p class="timeline-company">QuantumResolve Technologies</p>
+                                <p>Developing secure data protocols for health-tech applications with a focus on 
+                                patient privacy and regulatory compliance.</p>
                             </div>
-                            <h4>Innovation Mindset</h4>
-                            <p>Pursuing novel solutions until they're perfected</p>
                         </div>
-                        <div class="highlight-card">
-                            <div class="highlight-icon">
-                                <i class="fas fa-hands-helping"></i>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 - 2025</span>
+                                <h3>Mathematics Tutor</h3>
+                                <p class="timeline-company">Bright Future Academy</p>
+                                <p>Teaching mathematics with interactive methods and technology-enhanced learning 
+                                tools to secondary school students.</p>
                             </div>
-                            <h4>Teaching Experience</h4>
-                            <p>Former Math Tutor at Bright Future Academy</p>
                         </div>
-                        <div class="highlight-card">
-                            <div class="highlight-icon">
-                                <i class="fas fa-tooth"></i>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 - Present</span>
+                                <h3>Science Innovations Coordinator</h3>
+                                <p class="timeline-company">KUHeS Science for All</p>
+                                <p>Leading student initiatives to promote STEM education and technological 
+                                innovation in healthcare settings.</p>
                             </div>
-                            <h4>Dental Surgery</h4>
-                            <p>Bachelor of Dental Surgery at KUHeS</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Timeline -->
-                <div class="timeline animate-on-scroll">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-year">2025 - Present</span>
-                            <h3>Data Privacy & Compliance Lead</h3>
-                            <span class="timeline-company">QuantumResolve Technologies</span>
-                            <p>Leading data protection strategies and compliance frameworks for health-tech solutions.</p>
+                
+                <div class="about-stats animate-on-scroll">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
+                        <h3>Bachelor of Dental Surgery</h3>
+                        <p>Kamuzu University of Health Sciences</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-year">2024 - 2025</span>
-                            <h3>Mathematics Tutor</h3>
-                            <span class="timeline-company">Bright Future Academy</span>
-                            <p>Guided secondary students in mathematics with innovative teaching methodologies.</p>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
+                        <h3>Health-Tech Development</h3>
+                        <p>Python, Firebase, Mobile Applications</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-year">2023 - Present</span>
-                            <h3>Science for All Innovations Coordinator</h3>
-                            <span class="timeline-company">Kamuzu University of Health Sciences</span>
-                            <p>Promoting science and tech innovation through campus events and student initiatives.</p>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
                         </div>
+                        <h3>Student Leadership</h3>
+                        <p>STEM Advocacy & Innovation Coordination</p>
                     </div>
                 </div>
             </div>
@@ -259,23 +217,23 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">02</span>
-                <h2 class="section-title">Technical & Professional Expertise</h2>
-                <div class="title-line"></div>
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Technical & Professional Skills</h2>
+                <p class="section-subtitle">Combining healthcare knowledge with technical proficiency</p>
             </div>
-
+            
             <div class="skills-grid">
-                <!-- Technical Skills -->
-                <div class="skill-category glass animate-on-scroll">
+                <div class="skill-category animate-on-scroll">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-laptop-code"></i>
+                            <i class="fas fa-laptop-medical"></i>
                         </div>
-                        <h3>Technical Stack</h3>
+                        <h3>Health-Tech Development</h3>
                     </div>
+                    
                     <div class="skill-list">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -287,313 +245,220 @@
                             </div>
                             <span class="skill-percent">95%</span>
                         </div>
+                        
                         <div class="skill-item">
                             <div class="skill-info">
                                 <i class="fas fa-mobile-alt"></i>
-                                <span>Python App Development</span>
+                                <span>Mobile App Development</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-level" data-level="92"></div>
                             </div>
                             <span class="skill-percent">92%</span>
                         </div>
+                        
                         <div class="skill-item">
                             <div class="skill-info">
-                                <i class="fas fa-fire"></i>
-                                <span>Firebase</span>
+                                <i class="fas fa-database"></i>
+                                <span>Firebase & Backend</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-level" data-level="88"></div>
                             </div>
                             <span class="skill-percent">88%</span>
                         </div>
+                        
                         <div class="skill-item">
                             <div class="skill-info">
-                                <i class="fas fa-flask"></i>
-                                <span>Flask Framework</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level" data-level="85"></div>
-                            </div>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Professional Skills -->
-                <div class="skill-category glass animate-on-scroll">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Professional Skills</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-chess-queen"></i>
-                                <span>Leadership</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level" data-level="94"></div>
-                            </div>
-                            <span class="skill-percent">94%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-comments"></i>
-                                <span>Communication</span>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Data Privacy & Security</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-level" data-level="90"></div>
                             </div>
                             <span class="skill-percent">90%</span>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Healthcare & Professional</h3>
+                    </div>
+                    
+                    <div class="skill-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <i class="fas fa-puzzle-piece"></i>
-                                <span>Problem Solving</span>
+                                <i class="fas fa-tooth"></i>
+                                <span>Dental Healthcare</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-level" data-level="96"></div>
                             </div>
                             <span class="skill-percent">96%</span>
                         </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-comments"></i>
+                                <span>Patient Communication</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="94"></div>
+                            </div>
+                            <span class="skill-percent">94%</span>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovation & Problem Solving</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="95"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        
                         <div class="skill-item">
                             <div class="skill-info">
                                 <i class="fas fa-users"></i>
-                                <span>Team Management</span>
+                                <span>Team Leadership</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-level" data-level="88"></div>
+                                <div class="skill-level" data-level="90"></div>
                             </div>
-                            <span class="skill-percent">88%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill Tags -->
-            <div class="skill-tags animate-on-scroll">
-                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-tag"><i class="fas fa-mobile-alt"></i> App Development</span>
-                <span class="skill-tag"><i class="fas fa-database"></i> Firebase</span>
-                <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
-                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-                <span class="skill-tag"><i class="fas fa-shield-alt"></i> Data Privacy</span>
-                <span class="skill-tag"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
-                <span class="skill-tag"><i class="fas fa-chart-line"></i> Data Analytics</span>
-                <span class="skill-tag"><i class="fas fa-file-alt"></i> Microsoft Office</span>
-                <span class="skill-tag"><i class="fas fa-search"></i> Research</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">03</span>
-                <h2 class="section-title">Innovative Projects</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="projects-grid">
-                <!-- CheckMySmile -->
-                <div class="project-card glass animate-on-scroll">
-                    <div class="project-image" style="background-image: url('checkmysmile.jpg');">
-                        <div class="project-overlay"></div>
-                        <div class="project-tag dental">
-                            <i class="fas fa-tooth"></i>
-                            Dental Technology
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>CheckMySmile</h3>
-                        <p class="project-desc">An oral health diagnostic tool designed to bridge the gap between neglected oral health symptoms and timely diagnosis. Features interactive learning modules and dental care reminders.</p>
-                        <div class="project-tech">
-                            <span><i class="fas fa-mobile-alt"></i> Python App</span>
-                            <span><i class="fas fa-fire"></i> Firebase</span>
-                            <span><i class="fas fa-heartbeat"></i> Healthcare</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://youtu.be/XfdkxzoQw9Q" target="_blank" class="btn btn-small">
-                                <i class="fas fa-play-circle"></i> Watch Demo
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poetry Quote App -->
-                <div class="project-card glass animate-on-scroll">
-                    <div class="project-image" style="background-image: url('poetry-app.jpg');">
-                        <div class="project-overlay"></div>
-                        <div class="project-tag creative">
-                            <i class="fas fa-pen-fancy"></i>
-                            Creative Tech
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Poetry Quote App</h3>
-                        <p class="project-desc">App extracting meaningful lines from poems as daily motivational quotes with mood-based recommendations and personal journaling features.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-python"></i> Python</span>
-                            <span><i class="fas fa-brain"></i> NLP</span>
-                            <span><i class="fas fa-book-open"></i> Literature</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-small">
-                                <i class="fas fa-lightbulb"></i> Concept
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fas fa-file-alt"></i> Design Docs
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- KUHeS Campus Connect -->
-                <div class="project-card glass animate-on-scroll">
-                    <div class="project-image" style="background-image: url('kuhes-campus-connect.jpg');">
-                        <div class="project-overlay"></div>
-                        <div class="project-tag edtech">
-                            <i class="fas fa-university"></i>
-                            Education Tech
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>KUHeS Campus Connect</h3>
-                        <p class="project-desc">Platform for student discussions, events, academic community building, resource sharing, and collaborative learning at KUHeS.</p>
-                        <div class="project-tech">
-                            <span><i class="fas fa-mobile-alt"></i> Python App</span>
-                            <span><i class="fas fa-fire"></i> Firebase</span>
-                            <span><i class="fas fa-users"></i> Community</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-small">
-                                <i class="fas fa-file-alt"></i> Project Brief
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fas fa-drafting-compass"></i> Wireframes
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">04</span>
-                <h2 class="section-title">Let's Connect & Collaborate</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="contact-content">
-                <!-- Contact Form -->
-                <div class="contact-form glass animate-on-scroll">
-                    <h3><i class="fas fa-envelope"></i> Send Me a Message</h3>
-                    <p>Interested in health-tech innovation, dental technology, or potential collaboration? Reach out!</p>
-                    
-                    <form action="https://formspree.io/f/xojnvgwl" method="POST" id="contactForm">
-                        <input type="hidden" name="_subject" value="📬 New Message from Joel's Portfolio">
-                        <input type="text" name="_gotcha" style="display:none">
-                        
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Full Name" required>
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email Address" required>
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Message Subject" required>
-                            <i class="fas fa-tag"></i>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                            <i class="fas fa-comment"></i>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        
-                        <div id="formStatus" style="display: none;"></div>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="contact-info animate-on-scroll">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Location</h4>
-                            <p>Kamuzu University of Health Sciences</p>
-                            <p>Blantyre, Malawi 🇲🇼</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p>joelkaudzu9@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Phone & WhatsApp</h4>
-                            <p>+265 983 142 415</p>
-                        </div>
-                    </div>
-                    
-                    <!-- WhatsApp Button -->
-                    <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" 
-                       target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        Chat on WhatsApp
-                    </a>
-                    
-                    <!-- Social Links -->
-                    <div class="contact-social">
-                        <h4>Connect with Me</h4>
-                        <div class="social-buttons">
-                            <a href="https://github.com/joelkaudzu9-ship-it" target="_blank" class="social-btn github">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" target="_blank" class="social-btn linkedin">
-                                <i class="fab fa-linkedin"></i>
-                                LinkedIn
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61552790831710" target="_blank" class="social-btn facebook">
-                                <i class="fab fa-facebook-f"></i>
-                                Facebook
-                            </a>
+                            <span class="skill-percent">90%</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Quote Box -->
-            <div class="quote-box glass animate-on-scroll">
-                <i class="fas fa-quote-left"></i>
-                <p>"Every great innovation starts with a simple idea and the courage to pursue it relentlessly."</p>
-                <div class="quote-author">— Joel George Kaudzu</div>
+            <div class="skill-tags animate-on-scroll">
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+                <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Mobile Dev</span>
+                <span class="skill-tag"><i class="fas fa-chart-line"></i> Data Analysis</span>
+                <span class="skill-tag"><i class="fas fa-stethoscope"></i> Clinical Skills</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Health-Tech Projects</h2>
+                <p class="section-subtitle">Practical solutions for real healthcare challenges</p>
+            </div>
+            
+            <div class="projects-grid" id="projectsContainer">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Let's Collaborate</h2>
+                <p class="section-subtitle">Interested in health-tech innovation or digital health solutions?</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>joelkaudzu9@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone / WhatsApp</h3>
+                            <p>+265 983 142 415</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Kamuzu University of Health Sciences<br>Blantyre, Malawi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:joelkaudzu9@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/265983142415" class="social-link" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate-on-scroll">
+                    <form id="contactForm" action="https://formspree.io/f/xjvnewwn" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project or inquiry">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project or idea..."></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                        
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -603,9 +468,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">JGK</div>
-                    <h3>Joel George Kaudzu</h3>
-                    <p>Dental Surgery Student | Health-Tech Innovator | Tech Leader</p>
+                    <div class="logo">🦷</div>
+                    <h3>Joel Kaudzu</h3>
+                    <p>Dental Tech Innovator & Developer</p>
                 </div>
                 
                 <div class="footer-links">
@@ -617,50 +482,35 @@
                 </div>
                 
                 <div class="footer-social">
-                    <a href="https://github.com/joelkaudzu9-ship-it" target="_blank" title="GitHub" class="footer-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" target="_blank" title="LinkedIn" class="footer-social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61552790831710" target="_blank" title="Facebook" class="footer-social-link">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/einzmo9" target="_blank" title="Instagram" class="footer-social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                    <p>Connect with me</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/joelkaudzu9-ship-it" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61552790831710" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:joelkaudzu9@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Joel George Kaudzu. All rights reserved.</p>
-                <p>Made with <i class="fas fa-heart"></i> for Health-Tech Innovation | From Malawi 🇲🇼 to the World</p>
+                <p>Built with care in Malawi 🇲🇼</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <button class="fab" id="backToTop">
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
-    <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" 
-       class="fab whatsapp-fab" target="_blank" title="Message on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loader">
-            <div class="tooth-icon">🦷</div>
-            <div class="loading-text">Loading Innovation...</div>
-            <div class="loading-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
