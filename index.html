@@ -428,52 +428,39 @@
         </div>
     </section>
 
-    <!-- Contact Section - WITH WORKING FORMSPREE FORM -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04</span>
-                Let's Connect
-                <span class="title-line"></span>
-            </h2>
-
-            <div class="contact-content">
-                <!-- Contact Form - USING FORMSPREE -->
-                <div class="contact-form glass animate-on-scroll">
-                    <h3><i class="fas fa-envelope"></i> Send Message</h3>
-                    <p>Interested in health-tech, dental innovation, or collaboration? Reach out to me!</p>
-                    
-                    <!-- Formspree Form - ACTUALLY WORKS -->
-                    <form action="https://formspree.io/f/xojnvgwl" method="POST" id="contactForm">
-                        <input type="hidden" name="_subject" value="📬 New Message from Joel Kaudzu's Portfolio">
-                        <input type="hidden" name="_replyto" value="{{email}}">
-                        <input type="text" name="_gotcha" style="display:none">
-                        <input type="hidden" name="_language" value="en">
-                        
-                        <div class="form-group">
-                            <input type="text" name="name" id="formName" placeholder="Your Name" required>
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="formEmail" placeholder="Your Email" required>
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" id="formSubject" placeholder="Subject" required>
-                            <i class="fas fa-tag"></i>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" id="formMessage" placeholder="Your Message" rows="4" required></textarea>
-                            <i class="fas fa-comment"></i>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        
-                        <div id="formMessageStatus" style="margin-top: 15px; display: none; padding: 10px; border-radius: 10px; text-align: center;"></div>
-                    </form>
-                </div>
+<!-- Contact Form - SIMPLE WORKING VERSION -->
+<div class="contact-form glass animate-on-scroll">
+    <h3><i class="fas fa-envelope"></i> Send Message</h3>
+    <p>Interested in health-tech, dental innovation, or collaboration? Reach out to me!</p>
+    
+    <!-- SIMPLE FORMSPREE FORM - NO JAVASCRIPT -->
+    <form action="https://formspree.io/f/xojnvgwl" method="POST">
+        <input type="hidden" name="_subject" value="📬 New Message from Joel's Portfolio">
+        <input type="hidden" name="_next" value="https://joelkaudzu9-ship-it.github.io/thank-you.html">
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+            <i class="fas fa-tag"></i>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <i class="fas fa-comment"></i>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+    </form>
+</div>
 
                 <!-- Contact Info -->
                 <div class="contact-info animate-on-scroll">
