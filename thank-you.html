@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! | Joel Kaudzu</title>
+    <title>Thank You | Joel Kaudzu</title>
     
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Styles -->
     <style>
-        /* CSS Variables */
-        :root {
-            --primary: #0a192f;
-            --accent: #64ffda;
-            --text-primary: #ffffff;
-            --text-secondary: #8892b0;
-            --bg-card: rgba(255, 255, 255, 0.05);
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -29,270 +16,204 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
-            color: var(--text-primary);
+            color: white;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            line-height: 1.6;
         }
         
-        .thank-you-container {
-            max-width: 600px;
+        .container {
+            max-width: 500px;
             width: 100%;
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 50px 40px;
             text-align: center;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 0.8s ease-out;
+            animation: fadeIn 0.5s ease;
         }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .success-icon {
-            font-size: 5rem;
-            color: var(--accent);
-            margin-bottom: 30px;
+            font-size: 4rem;
+            color: #64ffda;
+            margin-bottom: 20px;
             animation: bounce 2s infinite;
         }
         
         @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-            background: linear-gradient(135deg, var(--accent) 0%, #52d4b0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #64ffda;
         }
         
         .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-weight: 600;
+            font-size: 1.1rem;
+            color: #8892b0;
+            margin-bottom: 25px;
         }
         
         .message {
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
         }
         
-        .action-buttons {
+        .buttons {
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
         }
         
         .btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            padding: 14px 28px;
-            border-radius: 12px;
+            padding: 15px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
-            min-height: 44px;
             border: 2px solid transparent;
         }
         
         .btn-primary {
-            background-color: var(--accent);
-            color: var(--primary);
+            background: #64ffda;
+            color: #0a192f;
         }
         
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
         }
         
         .btn-secondary {
-            background-color: transparent;
-            color: var(--accent);
-            border-color: var(--accent);
+            background: transparent;
+            color: #64ffda;
+            border-color: #64ffda;
         }
         
         .btn-secondary:hover {
-            background-color: rgba(100, 255, 218, 0.1);
-            transform: translateY(-3px);
+            background: rgba(100, 255, 218, 0.1);
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 40px;
-            padding-top: 40px;
+            margin-top: 30px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-link {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
-            background-color: var(--bg-card);
-            font-size: 1.25rem;
+            color: white;
+            font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-link:hover {
-            transform: translateY(-5px);
-            background-color: var(--accent);
-            color: var(--primary);
-            border-color: transparent;
+            background: #64ffda;
+            color: #0a192f;
+            transform: translateY(-3px);
         }
         
         .countdown {
-            margin-top: 40px;
-            padding: 25px;
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
             border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         .countdown p {
-            color: var(--text-secondary);
+            color: #8892b0;
             margin-bottom: 10px;
             font-size: 0.9rem;
         }
         
         .countdown-timer {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
+            font-weight: bold;
+            color: #64ffda;
             font-family: 'Courier New', monospace;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .thank-you-container {
-                padding: 40px 30px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .social-links {
-                gap: 12px;
-            }
-            
-            .social-link {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-            }
-        }
-        
         @media (max-width: 480px) {
-            .thank-you-container {
-                padding: 30px 20px;
+            .container {
+                padding: 15px;
             }
             
             h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
             
             .success-icon {
-                font-size: 4rem;
+                font-size: 3rem;
             }
             
-            .countdown {
-                padding: 20px;
+            .btn {
+                padding: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="thank-you-container">
+    <div class="container">
         <div class="success-icon">
             <i class="fas fa-check-circle"></i>
         </div>
         
-        <h1>Message Received!</h1>
-        
+        <h1>Message Sent!</h1>
         <p class="subtitle">Thank you for reaching out</p>
         
         <div class="message">
-            Your message has been successfully sent. I'll review it and get back to you within 24 hours. 
-            In the meantime, feel free to explore my work or connect with me through social media.
+            I've received your message and will get back to you within 24 hours. 
+            Feel free to explore my portfolio in the meantime.
         </div>
         
-        <div class="action-buttons">
+        <div class="buttons">
             <a href="index.html" class="btn btn-primary">
                 <i class="fas fa-home"></i>
-                Return to Portfolio
+                Back to Portfolio
             </a>
             <a href="index.html#projects" class="btn btn-secondary">
                 <i class="fas fa-eye"></i>
-                View My Projects
+                View Projects
             </a>
         </div>
         
         <div class="social-links">
-            <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+            <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank">
+                <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:joelkaudzu9@gmail.com" class="social-link" aria-label="Email">
+            <a href="mailto:joelkaudzu9@gmail.com" class="social-link">
                 <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/265983142415" class="social-link" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         
@@ -303,43 +224,24 @@
     </div>
 
     <script>
-        // Countdown timer
+        // Simple countdown timer
         let countdown = 10;
         const countdownElement = document.getElementById('countdown');
-        const countdownInterval = setInterval(() => {
+        
+        const timer = setInterval(() => {
             countdown--;
             countdownElement.textContent = countdown;
             
             if (countdown <= 0) {
-                clearInterval(countdownInterval);
+                clearInterval(timer);
                 window.location.href = 'index.html';
             }
         }, 1000);
         
-        // Allow user to cancel auto-redirect
+        // Cancel redirect on any click
         document.addEventListener('click', () => {
-            clearInterval(countdownInterval);
+            clearInterval(timer);
             countdownElement.textContent = 'Redirect cancelled';
-            countdownElement.style.color = '#ff6b6b';
-        });
-        
-        // Optional: Add keyboard support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                clearInterval(countdownInterval);
-                countdownElement.textContent = 'Redirect cancelled';
-                countdownElement.style.color = '#ff6b6b';
-            }
-        });
-        
-        // Page load animation
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
         });
     </script>
 </body>
