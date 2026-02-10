@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Joel Kaudzu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--light);
+            max-width: 600px;
+        }
+        
+        .error-details {
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-message {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">🦷</div>
+                <span class="logo-text">Joel Kaudzu</span>
+            </div>
+            <a href="index.html" class="btn btn-outline">
+                <i class="fas fa-home"></i> Back Home
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Page Not Found</h2>
+        <p class="error-details">
+            The page you're looking for doesn't exist or has been moved.
+            Don't worry though, you can find your way back home!
+        </p>
+        
+        <div class="hero-actions">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Back to Homepage
+            </a>
+            <a href="index.html#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i> Contact Me
+            </a>
+        </div>
+        
+        <!-- Quick Links -->
+        <div style="margin-top: 50px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <a href="index.html#about" class="btn btn-small">
+                <i class="fas fa-user-md"></i> About
+            </a>
+            <a href="index.html#skills" class="btn btn-small">
+                <i class="fas fa-brain"></i> Skills
+            </a>
+            <a href="index.html#projects" class="btn btn-small">
+                <i class="fas fa-rocket"></i> Projects
+            </a>
+            <a href="index.html#contact" class="btn btn-small">
+                <i class="fas fa-comment"></i> Contact
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="position: absolute; bottom: 0; width: 100%;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Joel George Kaudzu. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for Health-Tech Innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Simple theme toggle
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'nav-theme-toggle';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.top = '20px';
+        themeToggle.style.right = '20px';
+        themeToggle.style.zIndex = '1000';
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            this.innerHTML = document.body.classList.contains('light-mode') 
+                ? '<i class="fas fa-sun"></i>' 
+                : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(themeToggle);
+    </script>
+</body>
+</html>
