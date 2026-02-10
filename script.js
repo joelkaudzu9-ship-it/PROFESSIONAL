@@ -255,10 +255,83 @@ function initPortfolio() {
         });
     });
     
+    // FORMSPREE FORM HANDLING
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('formMessageStatus');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                // Submit to Formspree
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully!';
+                    statusDiv.style.background = 'rgba(16, 185, 129, 0.2)';
+                    statusDiv.style.color = '#10b981';
+                    statusDiv.style.border = '1px solid #10b981';
+                    statusDiv.style.display = 'block';
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                    submitBtn.style.background = '#10b981';
+                    
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = '';
+                        
+                        // Redirect to thank you page
+                        window.location.href = "thank-you.html";
+                    }, 3000);
+                    
+                } else {
+                    throw new Error('Form submission failed');
+                }
+                
+            } catch (error) {
+                // Error handling
+                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again.';
+                statusDiv.style.background = 'rgba(239, 68, 68, 0.2)';
+                statusDiv.style.color = '#ef4444';
+                statusDiv.style.border = '1px solid #ef4444';
+                statusDiv.style.display = 'block';
+                
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+                submitBtn.style.background = '#ef4444';
+                
+                // Reset button after 5 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    statusDiv.style.display = 'none';
+                }, 5000);
+            }
+        });
+    }
+    
     console.log('🎉 Portfolio loaded successfully!');
     console.log('✅ All icons working');
     console.log('✅ Dark/Light mode working');
-    console.log('✅ Email form working');
+    console.log('✅ Formspree form working');
     console.log('✅ Background image loaded');
 }
 
