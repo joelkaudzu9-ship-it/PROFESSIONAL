@@ -9,10 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
-    <style>
-        /* Force Font Awesome to load */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-    </style>
 </head>
 <body>
     <!-- Animated Background -->
@@ -134,25 +130,25 @@
                 </a>
             </div>
 
-            <!-- Social Bar - SIMPLE WORKING VERSION -->
+            <!-- Social Bar - FIXED ICONS -->
             <div class="social-bar animate__animated animate__fadeIn animate__delay-2s">
                 <a href="https://github.com/joelkaudzu9-ship-it" class="social-link" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
+                    <i class="fab fa-github fa-fw"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/joel-kaudzu-0bba48392" class="social-link" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-linkedin-in fa-fw"></i>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61552790831710" class="social-link" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-facebook-f fa-fw"></i>
                 </a>
                 <a href="https://www.instagram.com/einzmo9" class="social-link" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-instagram fa-fw"></i>
                 </a>
                 <a href="mailto:joelkaudzu9@gmail.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope fa-fw"></i>
                 </a>
                 <a href="https://wa.me/265983142415?text=Hi%20Joel,%20I%20saw%20your%20portfolio!" class="social-link" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-whatsapp fa-fw"></i>
                 </a>
             </div>
 
@@ -428,7 +424,7 @@
         </div>
     </section>
 
-    <!-- Contact Section - WITH WORKING FORMSPREE FORM -->
+    <!-- Contact Section - SIMPLE WORKING FORM -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">
@@ -438,32 +434,30 @@
             </h2>
 
             <div class="contact-content">
-                <!-- Contact Form - USING FORMSPREE -->
+                <!-- Contact Form - SIMPLE & WORKING -->
                 <div class="contact-form glass animate-on-scroll">
                     <h3><i class="fas fa-envelope"></i> Send Message</h3>
                     <p>Interested in health-tech, dental innovation, or collaboration? Reach out to me!</p>
                     
-                    <!-- Formspree Form - ACTUALLY WORKS -->
+                    <!-- SIMPLE FORMSPREE FORM - NO JAVASCRIPT NEEDED -->
                     <form action="https://formspree.io/f/xojnvgwl" method="POST" id="contactForm">
-                        <input type="hidden" name="_subject" value="📬 New Message from Joel Kaudzu's Portfolio">
-                        <input type="hidden" name="_replyto" value="{{email}}">
+                        <input type="hidden" name="_subject" value="📬 New Message from Joel's Portfolio">
                         <input type="text" name="_gotcha" style="display:none">
-                        <input type="hidden" name="_language" value="en">
                         
                         <div class="form-group">
-                            <input type="text" name="name" id="formName" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="formEmail" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" id="formSubject" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                             <i class="fas fa-tag"></i>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="formMessage" placeholder="Your Message" rows="4" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                             <i class="fas fa-comment"></i>
                         </div>
                         
@@ -471,7 +465,8 @@
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                         
-                        <div id="formMessageStatus" style="margin-top: 15px; display: none; padding: 10px; border-radius: 10px; text-align: center;"></div>
+                        <!-- Simple status message -->
+                        <div id="formStatus" style="margin-top: 15px; display: none; padding: 10px; border-radius: 10px; text-align: center;"></div>
                     </form>
                 </div>
 
@@ -596,8 +591,7 @@
         </div>
     </div>
 
-    <!-- Add EmailJS for form submission -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
