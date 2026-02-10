@@ -1950,3 +1950,33 @@ body.light-mode .loading-text {
         right: 80px;
     }
 }
+/* ===== FIX FOR SOCIAL MEDIA ICONS ===== */
+.fa-fw {
+    width: 1.25em !important;
+    text-align: center !important;
+    display: inline-block !important;
+}
+
+.social-link i {
+    font-size: 1.2rem !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure Font Awesome loads */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Fix for Font Awesome not showing */
+.fab, .fas {
+    font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free' !important;
+    font-weight: 400 !important;
+}
+
+/* Fix for specific social icons */
+.fa-github:before { content: "\f09b" !important; }
+.fa-linkedin-in:before { content: "\f0e1" !important; }
+.fa-facebook-f:before { content: "\f39e" !important; }
+.fa-instagram:before { content: "\f16d" !important; }
+.fa-whatsapp:before { content: "\f232" !important; }
+.fa-envelope:before { content: "\f0e0" !important; }
